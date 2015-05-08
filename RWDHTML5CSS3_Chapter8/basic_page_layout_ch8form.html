@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+<title>Oscar Redemption: And the winner isn't…</title>
+
+<link href="css/main.css" rel="stylesheet" />
+<script src="js/jquery-1.7.1.js"></script> 
+<script src="js-webshim/minified/extras/modernizr-custom.js"></script>
+<script src="js-webshim/minified/polyfiller.js"></script> 
+<script> 	
+	//replace UI also in browsers which do support type="date"/type="slider"
+	$.webshims.setOptions('forms-ext', { replaceUI: false });
+	
+	//set language/UI dateformat
+	//$.webshims.activeLang('hu'); // hu == hungary
+	
+	//start polyfilling
+	$.webshims.polyfill('forms-ext');
+</script>
+</head>
+
+<body id="redemptionPage">
+
+<div id="wrapper"> 
+	<!-- the header and navigation -->
+	<header role="banner" class="group">
+		<div id="logo">And the winner is<span>n't...</span></div> 
+		<nav role="navigation"> 
+			<ul>
+				<li><a href="#">Why?</a></li>
+				<li><a href="#">Synopsis</a></li>
+				<li><a href="#">Redemption</a></li>
+				<li><a href="#">Videos/clips</a></li>
+				<li><a href="#">Quotes</a></li>
+				<li><a href="#">Quiz</a></li>
+			</ul>
+		</nav> 	
+		
+	</header> 
+	<!-- the content -->
+	<div id="content" class="group" role="main">
+		
+		
+		<form id="redemption" method="post">
+			<hgroup>
+				<h1>Oscar Redemption</h1>
+				<h2>Here's your chance to set the record straight: tell us what year the wrong film got nominated, and which film <b>should</b> have received a nod...</h2>
+			</hgroup>
+			<fieldset>
+				<legend>About the offending film (part 1 of 3)</legend>
+				<div>
+					<label for="film">The film in question?</label>
+					<input id="film" name="film" type="text" placeholder="e.g. King Kong" required aria-required="true">
+				</div>
+				<div>
+					<label for="yearOfCrime">Year Of Crime</label>
+					<input id="yearOfCrime" name="yearOfCrime" type="number" min="1929" max="2015" required aria-required="true">
+				</div>
+				<div>
+					<label for="awardWon">Award Won</label>
+					<input id="awardWon" name="awardWon" type="text" list="awards">
+					<datalist id="awards">
+						<select>					
+							<option value="Best Picture"></option>
+							<option value="Best Director"></option>
+							<option value="Best Adapted Screenplay"></option>
+							<option value="Best Original Screenplay"></option>
+						</select>
+					</datalist>
+				</div>
+				<div>
+					<label for="whyItsWrong">Tell us why that's wrong?</label>
+					<textarea id="whyItsWrong" name="whyItsWrong" placeholder="I fell asleep within 20 minutes..." required aria-required="true" ></textarea>
+				</div>
+				<div>
+					<label for="howYouRateIt">How you rate it (1 is woeful, 10 is awesomesauce)</label>
+					<input id="howYouRateIt" name="howYouRateIt" type="range" min="1" max="10" value="5" onchange="showValue(this.value)"><span id="range">5</span>
+					
+				</div>
+				<script>
+				function showValue(newValue)
+				{
+					document.getElementById("range").innerHTML=newValue;
+				}
+				</script>
+				
+			</fieldset>
+			
+			<fieldset>
+				<legend>What should have won? (part 2 of 3)</legend>
+				
+				<div>
+					<label for="filmGood">The film that should have won?</label>
+					<input id="filmGood" name="filmGood" type="text" placeholder="e.g. Cable Guy" required aria-required="true" >
+				</div>
+				
+				<div>
+					<label for="whyItShould">Tell us why it should have won?</label>
+					<textarea id="whyItShould" name="whyItShould" placeholder="Hello? CAABBLLLLE GUUUY!!!!!" required aria-required="true" ></textarea>
+				</div>
+				<div>
+					<label for="howYouRateThis">How you rate it (1 is woeful, 10 is awesomesauce)</label>
+					<input id="howYouRateThis" name="howYouRateThis" type="number" min="1" max="10" value="5" required aria-required="true">
+				</div>
+				
+			</fieldset>
+			
+			<fieldset>
+				<legend>About you? (part 3 of 3)</legend>
+				
+				<div>
+					<label for="name">Your Name</label>
+					<input id="name" name="name" pattern="([a-zA-Z]{3,30}\s*)+[a-zA-Z]{3,30}" placeholder="Dwight Schultz" required aria-required="true" >
+				</div>
+				<div>
+					<label for="color">Your favorite color</label>
+					<input id="color" name="color" type="color">
+				</div>
+				<div>
+					<label for="date">Date/Time</label>
+					<input id="Employee_hireDate" class="pickDate" type="date" name="Employee[hireDate]" />
+				</div>
+				<div>
+					<label for="tel">Telephone (so we can berate you if you're wrong)</label>
+					<input id="tel" name="tel" type="tel" placeholder="1-234-546758" autocomplete="off" required aria-required="true" >
+				</div>
+				<div>
+					<label for="email">Your Email address</label>
+					<input id="email" name="email" type="email" placeholder="dwight.schultz@gmail.com" required aria-required="true">
+				</div>
+				<div>
+					<label for="web">Your Web address</label>
+					<input id="web" name="web" type="url" placeholder="www.mysite.com">
+				</div>
+				
+			</fieldset>
+			<input type="submit" id="submit" value="Submit Redemption">
+		</form>
+		
+	</div>
+	<!-- the sidebar -->
+	<aside>
+		<div role="complementary">
+			<div class="sideBlock unSung">
+				<h1>Unsung heroes...</h1>
+				<a href="#"><img src="img/midnightRun.jpg" alt="Midnight Run" /></a>
+				<a href="#"><img src="img/wyattEarp.jpg" alt="Wyatt Earp" /></a>
+				
+			</div>
+		</div>
+		<div role="complementary">
+			<div class="sideBlock overHyped">
+				<h1>Overhyped nonsense...</h1>
+				<a href="#"><img src="img/moulinRouge.jpg" alt="Moulin Rouge" /></a>
+				<a href="#"><img src="img/kingKong.jpg" alt="King Kong" /></a>
+			</div>
+		</div>
+	</aside> 
+	<!-- the footer -->
+	<footer role="contentinfo"> 
+		<p>Note: our opinion is absolutely correct. You are wrong, even if you think you are right. That’s a fact. Deal with it.</p>
+	</footer> 
+
+</div> 
+
+
+
+</body>
+</html>

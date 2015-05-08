@@ -1,0 +1,19 @@
+CACHE MANIFEST
+# Cache Manifest v5
+
+CACHE:
+css/main.css
+img/atwiNavBg.png
+img/kingHong.jpg
+img/midnightRun.jpg
+img/moulinRouge.jpg
+img/oscar.png
+img/wyattEarp.jpg
+img/buntingSlice3Invert.png
+img/buntingSlice3.png
+
+
+FALLBACK:
+/ /offline.html
+NETWORK:
+*

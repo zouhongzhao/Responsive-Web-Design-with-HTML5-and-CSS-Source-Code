@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" manifest="/packt/ch4/code/offline.manifest">
+<head>
+<meta charset=utf-8>
+<meta name="viewport"  content="width=device-width,initial-scale=1.0" />
+<title>And the winner isn't…</title>
+<link href="css/main.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/
+   jquery.min.js"></script>
+   <script src="js/fitvids.js"></script>
+   <script>
+     $(document).ready(function(){
+       // Target your .container, .wrapper, .post, etc.
+       $("#content").fitVids();
+     });
+   </script>
+</head>
+
+<body>
+
+<div id="wrapper"> 
+	<!-- the header and navigation -->
+	<header role="banner">
+		<div id="logo">And the winner is<span>n't...</span></div> 
+		<nav role="navigation"> 
+			<ul>
+				<li><a href="#">Why?</a></li>
+				<li><a href="#">Synopsis</a></li>
+				<li><a href="#">Stills/Photos</a></li>
+				<li><a href="#">Videos/clips</a></li>
+				<li><a href="#">Quotes</a></li>
+				<li><a href="#">Quiz</a></li>
+			</ul>
+		</nav> 	
+	</header> 
+	<!-- the content -->
+	<div id="content" role="main">
+		
+		<iframe width="960" height="720" src="http://www.youtube.com/embed/
+   B1_N28DA3gY" frameborder="0" allowfullscreen></iframe>	
+	</div>
+	<!-- the sidebar -->
+	<aside>
+		<section role="complementary">
+			<div class="sideBlock unSung">
+				<h1>Unsung heroes...</h1>
+				<a href="#"><img src="img/midnightRun.jpg" alt="Midnight Run" /></a>
+				<a href="#"><img class="sideImage" src="img/wyattEarp.jpg" alt="Wyatt Earp" /></a>
+			</div>
+		</section>
+		<section role="complementary">
+			<div class="sideBlock overHyped">
+				<h1>Overhyped nonsense...</h1>
+				<a href="#"><img src="img/moulinRouge.jpg" alt="Moulin Rouge" /></a>
+				<a href="#"><img src="img/kingKong.jpg" alt="King Kong" /></a>
+			</div>
+		</section>
+	</aside> 
+	<!-- the footer -->
+	<footer role="contentinfo"> 
+		<p>Note: our opinion is absolutely correct. You are wrong, even if you think you are right. That’s a fact. Deal with it.</p>
+	</footer> 
+
+</div> 
+</body>
+</html>

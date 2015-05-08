@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+<style type="text/css">
+body {
+    background-color: #bfbfbf;
+}
+.box {
+    text-shadow: -0.5px 1px 1px white;
+    font-size: 0.8em;
+    color: black;
+    padding: 10px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.8);
+    display: inline;
+    float: left;
+    margin-left: 11px;
+    background-color: #bfd255; /* Old browsers */
+    background-color: hsla(69,58%,58%,0.9);
+    transition: all 0.3s ease-in-out;
+}
+.box a {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 1.4em;
+    color: black;
+    display: inline-block;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.box h1 {
+    color: #515151;
+    font-size: 1.5em;
+}
+.box a:hover {
+    -webkit-transform: rotate(-40000deg);
+    -moz-transform: rotate(-40000deg);
+    -o-transform: rotate(-40000deg);
+    transform: rotate(-40000deg);
+}
+h2 {
+    font-size: 1.4em;
+}
+.box a.scale {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    font-family: "Courier New", Courier, Monaco, monospace;
+    text-transform: uppercase;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.box {	
+    transform: none;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}  	
+
+.box:hover {
+    -webkit-transform: translate(12px, 15px) skew(-2deg, 2deg) rotate(2deg) scale(1.1);
+    -moz-transform: translate(12px, 15px) skew(-2deg, 2deg) rotate(2deg) scale(1.1);
+    -o-transform: translate(12px, 15px) skew(-2deg, 2deg) rotate(2deg) scale(1.1);
+    transform: translate(12px, 15px) skew(-2deg, 2deg) rotate(2deg) scale(1.1);
+}  	  	
+</style>
+  <meta charset="utf-8">
+  <title>A quick demo of the power of CSS3</title>
+  </head>
+<body>
+    <div id="main" role="main">
+		<div class="box">
+			<h1><b>Look 'Ma</b> - no JavaScript!</h1>
+			<h2>Using CSS3 is faster and easier to maintain</h2>
+			<p>Click <a href="#">this link</a> in a modern browser and it will animate. </p>
+			<p>And <a href="#" class="scale">this link</a> - has been scaled by 110%</p>
+		</div>
+    </div>
+</body>
+</html>
